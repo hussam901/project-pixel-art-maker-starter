@@ -7,6 +7,7 @@ let width = document.querySelector("#inputWidth");
 let submit = document.querySelector("#sizePicker input[type= submit]");
 submit.addEventListener("click",makeGrid);
 let table = document.querySelector("#pixelCanvas");
+table.addEventListener("click",fillColor);
 
 function makeGrid(event) {
     table.innerHTML="";
@@ -20,4 +21,8 @@ function makeGrid(event) {
         }
         table.appendChild(tr);
     }
+}
+
+function fillColor(event){
+    event.target.style.background = color.value ;
 }
